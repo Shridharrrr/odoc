@@ -19,3 +19,4 @@ __pycache__/
 
 # Poetry virtual environment
 .venv
+dist
