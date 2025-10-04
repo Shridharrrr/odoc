@@ -5,7 +5,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [project]
-name = "odoc"
+name = "odocxify"
 version = "0.1.0"
 description = "An intelligent, AI-powered documentation generator for Python."
 authors = [
@@ -28,12 +28,12 @@ Homepage = "https://Shridharrr.github.io/odoc/" # <-- UPDATE THIS
 Repository = "https://github.com/Shridharrr/odoc" # <-- UPDATE THIS
 
 [project.scripts]
-odoc = "odoc.main:app"
+odoc = "odocxify.main:app"
 
 # --- Poetry-specific configuration remains below ---
 
 [tool.poetry]
-packages = [{include = "odoc", from = "src"}]
+packages = [{include = "odocxify", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
