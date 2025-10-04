@@ -26,6 +26,8 @@ jobs:
 
       - name: Generate docs from source code
         run: poetry run odoc .
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       
       # NEW STEP: Build the MkDocs site
       - name: Build MkDocs site
