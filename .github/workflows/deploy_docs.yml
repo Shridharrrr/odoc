@@ -1,3 +1,4 @@
+# .github/workflows/deploy-docs.yml
 name: Deploy Documentation
 
 on:
@@ -26,13 +27,14 @@ jobs:
       - name: Generate docs from source code
         run: poetry run odoc .
       
-      # NEW STEP: Export dependencies for the deployment action
-      - name: Export dependencies
-        run: poetry export -f requirements.txt --output requirements.txt --without-hashes
+      # NEW STEP: Build the MkDocs site
+      - name: Build MkDocs site
+        run: poetry run mkdocs build
 
-      - name: Deploy documentation to GitHub Pages
-        # CORRECTED ACTION: Using the correct, modern action with the @v1 tag
-        uses: mikefarah/mkdocs-github-pages@v1
+      # NEW ACTION: Using a different, robust deployment action
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          # The requirements file will be used to install mkdocs and plugins
-          requirements_file: requirements.txt
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # The directory that the 'mkdocs build' command creates
+          publish_dir: ./site
