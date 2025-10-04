@@ -25,12 +25,14 @@ jobs:
 
       - name: Generate docs from source code
         run: poetry run odoc .
-        env:
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      
+      # NEW STEP: Export dependencies for the deployment action
+      - name: Export dependencies
+        run: poetry export -f requirements.txt --output requirements.txt --without-hashes
 
       - name: Deploy documentation to GitHub Pages
-
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        # CORRECTED ACTION: Using the correct, modern action with the @v1 tag
+        uses: mikefarah/mkdocs-github-pages@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
+          # The requirements file will be used to install mkdocs and plugins
+          requirements_file: requirements.txt
