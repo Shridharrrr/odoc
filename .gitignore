@@ -1,0 +1,19 @@
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Test and sample directories
+/tests
+/sample_project
+/file_handler
+/ai_test.py
+*.md
+
+# MkDocs build output directory
+/site/
+
+# Poetry virtual environment
+.venv

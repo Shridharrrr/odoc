@@ -1,0 +1,26 @@
+# `{{ file_path }}`
+
+{% set analysis = analysis_data %}
+
+{% if analysis.classes %}
+## Classes
+{% for class in analysis.classes %}
+### Class: `{{ class.name }}`
+::: {{ class.name }}
+> {{ class.docstring }}
+
+{% for method in class.methods %}
+#### `{{ method.name }}` {% if method.ai_generated %}🤖{% endif %}
+> {{ method.docstring }}
+{% endfor %}
+
+{% endfor %}
+{% endif %}
+
+{% if analysis.functions %}
+## Standalone Functions
+{% for func in analysis.functions %}
+### Function: `{{ func.name }}` {% if func.ai_generated %}🤖{% endif %}
+> {{ func.docstring }}
+{% endfor %}
+{% endif %}
