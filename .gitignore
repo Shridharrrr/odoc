@@ -11,6 +11,8 @@ __pycache__/
 /file_handler
 /ai_test.py
 *.md
+!README.md
+
 
 # MkDocs build output directory
 /site/
