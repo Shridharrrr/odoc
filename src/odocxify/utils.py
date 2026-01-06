@@ -1,5 +1,10 @@
-import tomllib  
+import sys
 from pathlib import Path
+
+if sys.version_info >= (3, 11):
+    import tomllib
+else:
+    import tomli as tomllib
 
 def find_python_files(start_path: Path, exclude_patterns: list[str]) -> list[Path]:
     """Finds all .py files recursively, respecting exclude patterns."""

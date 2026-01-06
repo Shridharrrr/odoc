@@ -25,7 +25,7 @@ def generate_docstring_for_code(source_code: str) -> dict | None:
         A dictionary with docstring info, or None if it fails.
     """
     # CHANGED: Use the latest recommended model name
-    model = genai.GenerativeModel('gemini-2.0-flash')
+    model = genai.GenerativeModel('gemini-2.5-flash-lite')
 
     prompt = f"""
     You are an expert Python programmer creating high-quality documentation.
