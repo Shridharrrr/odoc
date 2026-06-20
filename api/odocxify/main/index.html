@@ -9,23 +9,25 @@
       
       
       
-        <link rel="prev" href="../main/">
+        <link rel="prev" href="../generator/">
       
       
+        <link rel="next" href="../utils/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
     
     
       
-        <title>src/odocxify/utils.py - Odoc Generated Docs</title>
+        <title>odocxify.main - Odoc Generated Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2a3383ac.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2a3383ac.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#srcodocxifyutilspy" class="md-skip">
+        <a href="#odocxifymain" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Odoc Generated Docs" class="md-header__button md-logo" aria-label="Odoc Generated Docs" data-md-component="logo">
+    <a href="../../.." title="Odoc Generated Docs" class="md-header__button md-logo" aria-label="Odoc Generated Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              src/odocxify/utils.py
+              odocxify.main
             
           </span>
         </div>
@@ -210,7 +212,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Odoc Generated Docs" class="md-nav__button md-logo" aria-label="Odoc Generated Docs" data-md-component="logo">
+    <a href="../../.." title="Odoc Generated Docs" class="md-nav__button md-logo" aria-label="Odoc Generated Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -225,24 +227,60 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Odoc Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
   
     
     
+      
+        
+          
+        
+      
+        
+      
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -251,13 +289,75 @@
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Api
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Odocxify
+    
+  </span>
+  
+
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            Api
+            Odocxify
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -273,7 +373,7 @@
   
   
   <span class="md-ellipsis">
-    src/odocxify/ai_doc_generator.py
+    odocxify.ai_doc_generator
     
   </span>
   
@@ -296,7 +396,7 @@
   
   
   <span class="md-ellipsis">
-    src/odocxify/analyzer.py
+    odocxify.analyzer
     
   </span>
   
@@ -319,30 +419,7 @@
   
   
   <span class="md-ellipsis">
-    src/odocxify/generator.py
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../main/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    src/odocxify/main.py
+    odocxify.generator
     
   </span>
   
@@ -374,7 +451,7 @@
   
   
   <span class="md-ellipsis">
-    src/odocxify/utils.py
+    odocxify.main
     
   </span>
   
@@ -387,7 +464,7 @@
   
   
   <span class="md-ellipsis">
-    src/odocxify/utils.py
+    odocxify.main
     
   </span>
   
@@ -410,28 +487,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#standalone-functions" class="md-nav__link">
+  <a href="#functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Standalone Functions
+      Functions
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Standalone Functions">
+    <nav class="md-nav" aria-label="Functions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-find_python_files-finds-all-py-files-recursively-respecting-exclude-patterns" class="md-nav__link">
+  <a href="#generate" class="md-nav__link">
     <span class="md-ellipsis">
-      Function: find_python_files &gt; Finds all .py files recursively, respecting exclude patterns.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-load_config-loads-odoc-configuration-from-pyprojecttoml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function: load_config &gt; Loads Odoc configuration from pyproject.toml.
+      generate
     </span>
   </a>
   
@@ -445,6 +513,37 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    odocxify.utils
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -485,28 +584,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#standalone-functions" class="md-nav__link">
+  <a href="#functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Standalone Functions
+      Functions
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Standalone Functions">
+    <nav class="md-nav" aria-label="Functions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-find_python_files-finds-all-py-files-recursively-respecting-exclude-patterns" class="md-nav__link">
+  <a href="#generate" class="md-nav__link">
     <span class="md-ellipsis">
-      Function: find_python_files &gt; Finds all .py files recursively, respecting exclude patterns.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-load_config-loads-odoc-configuration-from-pyprojecttoml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function: load_config &gt; Loads Odoc configuration from pyproject.toml.
+      generate
     </span>
   </a>
   
@@ -533,10 +623,18 @@
 
 
 
-<h1 id="srcodocxifyutilspy"><code>src/odocxify/utils.py</code></h1>
-<h2 id="standalone-functions">Standalone Functions</h2>
-<h3 id="function-find_python_files-finds-all-py-files-recursively-respecting-exclude-patterns">Function: <code>find_python_files</code> &gt; Finds all .py files recursively, respecting exclude patterns.</h3>
-<h3 id="function-load_config-loads-odoc-configuration-from-pyprojecttoml">Function: <code>load_config</code> &gt; Loads Odoc configuration from pyproject.toml.</h3>
+<h1 id="odocxifymain"><code>odocxify.main</code><a class="headerlink" href="#odocxifymain" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Source</p>
+<p><code>odocxify/main.py</code></p>
+</div>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
+<h3 id="generate"><code>generate</code><a class="headerlink" href="#generate" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">generate</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="n">typer</span><span class="o">.</span><span class="n">Argument</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The path to a file or directory to document.&#39;</span><span class="p">),</span> <span class="n">output_dir</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span><span class="s1">&#39;docs/api&#39;</span><span class="p">,</span> <span class="s1">&#39;--out&#39;</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Output directory for documentation files.&#39;</span><span class="p">),</span> <span class="n">include_private</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;--private&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Include private names that start with _.&#39;</span><span class="p">),</span> <span class="n">use_ai</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;--ai&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Use Gemini to draft missing docstrings when GOOGLE_API_KEY is set.&#39;</span><span class="p">),</span> <span class="n">ai_model</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span><span class="s1">&#39;gemini-2.5-flash-lite&#39;</span><span class="p">,</span> <span class="s1">&#39;--ai-model&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Gemini model used with --ai.&#39;</span><span class="p">),</span> <span class="n">template_dir</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span><span class="o">=</span><span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;--template-dir&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Optional directory containing custom Jinja templates.&#39;</span><span class="p">),</span> <span class="n">clean</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;--clean&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Delete old Markdown files in the output directory before generating.&#39;</span><span class="p">),</span> <span class="n">fail_on_empty</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;--fail-on-empty&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Exit with an error if no documentable API is found.&#39;</span><span class="p">)):</span>
+</code></pre></div>
+<p><strong>Line:</strong> 15</p>
+<p><strong>Decorators:</strong> <code>@app.command()</code>
+Generate documentation files for a Python project.</p>
 
 
 
@@ -585,10 +683,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "navigation.sections", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
