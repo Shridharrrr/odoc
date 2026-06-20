@@ -6,7 +6,7 @@ build-backend = "poetry.core.masonry.api"
 
 [project]
 name = "odocxify"
-version = "0.1.0"
+version = "0.2.0"
 description = "An intelligent, AI-powered documentation generator for Python."
 authors = [
     {name = "Shridhar Mandrekar", email = "shridharmandrekar118@gmail.com"},
