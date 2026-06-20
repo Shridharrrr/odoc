@@ -1,6 +1,10 @@
 site_name: Odoc Generated Docs
 theme:
   name: material
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - content.code.copy
   palette:
     - scheme: default
       toggle:
@@ -14,3 +18,11 @@ theme:
 plugins:
   - search
   - awesome-pages
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences

@@ -1,26 +1,117 @@
-# `{{ file_path }}`
-
 {% set analysis = analysis_data %}
+
+# `{{ module_name }}`
+
+!!! info "Source"
+    `{{ file_path }}`
+
+{% if analysis.module_docstring %}
+{{ analysis.module_docstring }}
+{% endif %}
+
+{% if analysis.errors %}
+## Parse Errors
+{% for error in analysis.errors %}
+- {{ error }}
+{% endfor %}
+{% endif %}
+
+{% if analysis.constants %}
+## Constants
+
+| Name | Type | Value | Line |
+| --- | --- | --- | --- |
+{% for constant in analysis.constants %}
+| `{{ constant.name }}` | `{{ constant.annotation or "-" }}` | `{{ constant.value or "-" }}` | {{ constant.lineno }} |
+{% endfor %}
+{% endif %}
 
 {% if analysis.classes %}
 ## Classes
-{% for class in analysis.classes %}
-### Class: `{{ class.name }}`
-::: {{ class.name }}
-> {{ class.docstring }}
+{% for cls in analysis.classes %}
+### `{{ cls.name }}`
 
-{% for method in class.methods %}
-#### `{{ method.name }}` {% if method.ai_generated %}🤖{% endif %}
-> {{ method.docstring }}
+```python
+class {{ cls.name }}{% if cls.bases %}({{ cls.bases | join(', ') }}){% endif %}:
+```
+
+{% if cls.decorators %}
+**Decorators:** {% for decorator in cls.decorators %}`@{{ decorator }}`{% if not loop.last %}, {% endif %}{% endfor %}
+{% endif %}
+
+{% if cls.docstring %}
+{{ cls.docstring }}
+{% else %}
+_No class docstring._
+{% endif %}
+
+{% if cls.attributes %}
+#### Attributes
+
+| Name | Type | Value | Line |
+| --- | --- | --- | --- |
+{% for attribute in cls.attributes %}
+| `{{ attribute.name }}` | `{{ attribute.annotation or "-" }}` | `{{ attribute.value or "-" }}` | {{ attribute.lineno }} |
 {% endfor %}
+{% endif %}
 
+{% if cls.methods %}
+#### Methods
+{% for method in cls.methods %}
+##### `{{ method.name }}`{% if method.ai_generated %} (AI drafted){% endif %}
+
+```python
+{{ method.signature }}:
+```
+
+**Line:** {{ method.lineno }}
+
+{% if method.decorators %}
+**Decorators:** {% for decorator in method.decorators %}`@{{ decorator }}`{% if not loop.last %}, {% endif %}{% endfor %}
+{% endif %}
+
+{% if method.docstring %}
+{{ method.docstring }}
+{% else %}
+_No method docstring._
+{% endif %}
+{% if not loop.last %}
+
+---
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if not loop.last %}
+
+---
+{% endif %}
 {% endfor %}
 {% endif %}
 
 {% if analysis.functions %}
-## Standalone Functions
+## Functions
 {% for func in analysis.functions %}
-### Function: `{{ func.name }}` {% if func.ai_generated %}🤖{% endif %}
-> {{ func.docstring }}
+### `{{ func.name }}`{% if func.ai_generated %} (AI drafted){% endif %}
+
+```python
+{{ func.signature }}:
+```
+
+**Line:** {{ func.lineno }}
+
+{% if func.decorators %}
+**Decorators:** {% for decorator in func.decorators %}`@{{ decorator }}`{% if not loop.last %}, {% endif %}{% endfor %}
+{% endif %}
+
+{% if func.docstring %}
+{{ func.docstring }}
+{% else %}
+_No function docstring._
+{% endif %}
+{% if not loop.last %}
+
+---
+{% endif %}
 {% endfor %}
 {% endif %}

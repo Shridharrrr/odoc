@@ -1,13 +1,14 @@
 # Odoc
 
-**Odoc** (Odocxify) is an intelligent, AI-powered documentation generator for Python projects. It uses Google's Gemini models to automatically generate comprehensive docstrings and API documentation for your code.
+**Odoc** (Odocxify) is a Markdown API documentation generator for Python projects. It works from static analysis by default and can optionally use Gemini to draft missing docstrings.
 
 ## Features
 
-- 🧠 **AI-Powered**: Uses Gemini 2.5 Flash Lite for high-quality, context-aware docstrings.
-- 📦 **Automated**: Scans your project for Python files and generates Markdown documentation.
-- ⚙️ **Configurable**: Exclude files/directories via `pyproject.toml`.
-- 🚀 **Modern**: Built with `typer`, `jinja2`, and `mkdocs` in mind.
+- Static analysis for modules, functions, async functions, classes, methods, decorators, return types, constants, and class attributes.
+- Markdown output that preserves package directory structure and includes an API index.
+- Optional AI mode for missing docstrings with `--ai`.
+- Configurable excludes via `pyproject.toml`.
+- Built for MkDocs, but the generated Markdown works anywhere.
 
 ## Installation
 
@@ -23,33 +24,39 @@ poetry add odocxify
 
 ## Usage
 
-1. **Set up your API Key**:
-   Create a `.env` file in your project root:
-   ```env
-   GOOGLE_API_KEY=your_gemini_api_key
-   ```
+Generate docs for the current project:
 
-2. **Run Odoc**:
-   ```bash
-   odoc .
-   ```
-   This will generate documentation for all Python files in the current directory and save them to `docs/api`.
+```bash
+odoc .
+```
 
-3. **Options**:
-   ```bash
-   odoc --help
-   odoc src/ --out my_docs/
-   ```
+This writes Markdown files to `docs/api`.
+
+Useful options:
+
+```bash
+odoc --help
+odoc src/ --out docs/api --clean
+odoc src/ --private
+odoc src/ --ai
+```
+
+AI mode is optional. To use it, create a `.env` file or environment variable:
+
+```env
+GOOGLE_API_KEY=your_gemini_api_key
+```
 
 ## Configuration
 
-You can configure `odoc` in your `pyproject.toml`:
+Configure `odoc` in `pyproject.toml`:
 
 ```toml
 [tool.odoc]
 exclude = [
     "tests/*",
-    "setup.py"
+    "setup.py",
+    "docs/*"
 ]
 ```
 

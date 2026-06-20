@@ -5,8 +5,7 @@
 __pycache__/
 *.pyc
 
-# Test and sample directories
-/tests
+# Local scratch/sample directories
 /sample_project
 /file_handler
 /ai_test.py
